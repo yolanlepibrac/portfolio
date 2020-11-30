@@ -21,13 +21,15 @@ module.exports = {
     "react/prop-types": "off",
     "import/no-cycle": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/no-unescaped-entities": "error",
     "react/prop-types": "off",
     "react/jsx-no-target-blank": "error",
     "eslint(react/display-name)": "off",
-    "react/jsx-no-bind": "error",
-    "react/jsx-curly-brace-presence": ["error", { props: "never", children: "never" }],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { props: "never", children: "never" },
+    ],
     "react/self-closing-comp": [
       "error",
       {
@@ -96,10 +98,10 @@ module.exports = {
     ],
 
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-empty-function": "error",
-    "no-console": "error",
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "no-console": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     curly: "error",
     "one-var": ["error", "never"],
     eqeqeq: "error",
