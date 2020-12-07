@@ -6,7 +6,7 @@ const palette = {
     default: grey[50],
   },
   primary: {
-    main: "#5bcf8f",
+    main: "#1c4c9e",
     contrastText: "#fff",
   },
   secondary: {
