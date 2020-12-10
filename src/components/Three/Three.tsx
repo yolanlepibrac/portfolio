@@ -31,7 +31,8 @@ const ThreeCanvas: React.FunctionComponent<ThreeCanvasProps> = ({
       >
         <ambientLight intensity={1} />
         <pointLight position={[100, 100, 100]} intensity={2.2} />
-        <pointLight position={[-100, -0, -0]} intensity={5} color="red" />
+        <pointLight position={[-100, -0, -0]} intensity={5} color="#1c4c9e" />
+        <pointLight position={[100, -0, -0]} intensity={5} color="#1c4c9e" />
         {/* <ambientLight intensity={0.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <pointLight position={[-10, -10, -10]} /> */}

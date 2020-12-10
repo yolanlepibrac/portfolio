@@ -22,11 +22,15 @@ function App() {
   return (
     <div
       className="App"
-      style={{ background: "linear-gradient(45deg, #FF7979, #7B86FF)" }}
+      style={{
+        backgroundImage:
+          "linear-gradient(to right top, #1c4c9e, #174188, #133672, #0f2c5d, #0c2249)",
+        height: "100vh",
+      }}
     >
       <ThemeProvider theme={theme}>
         <Header setCurrentTab={handleCurrentTab} currentTab={currentTab} />
-        {/* <ThreeCanvas currentTab={currentTab} /> */}
+        <ThreeCanvas currentTab={currentTab} />
       </ThemeProvider>
     </div>
   );
