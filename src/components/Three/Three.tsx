@@ -1,13 +1,11 @@
-import React, { useRef, useState, MutableRefObject } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
-import { Swarm } from "../Swarm/Swarm";
+import React, { useRef } from "react";
+import { Canvas } from "react-three-fiber";
 import * as THREE from "three";
-import Effects from "./Effects";
-import { Box, Tabs } from "../Box/Box";
+import { Tabs } from "../Box/Box";
 import { BoxGrid } from "../BoxGrid/BoxGrid";
 
 interface ThreeCanvasProps {
-  currentTab: Tabs;
+  currentTab: Tabs | null;
 }
 
 const ThreeCanvas: React.FunctionComponent<ThreeCanvasProps> = ({
@@ -30,9 +28,8 @@ const ThreeCanvas: React.FunctionComponent<ThreeCanvasProps> = ({
         }}
       >
         <ambientLight intensity={1} />
-        <pointLight position={[100, 100, 100]} intensity={2.2} />
-        <pointLight position={[-100, -0, -0]} intensity={5} color="#1c4c9e" />
-        <pointLight position={[100, -0, -0]} intensity={5} color="#1c4c9e" />
+        <pointLight position={[0, 0, -100]} intensity={2.2} />
+        <pointLight position={[-100, -0, -0]} intensity={5} color="white" />
 
         <BoxGrid currentTab={currentTab} mouse={mouse} />
       </Canvas>

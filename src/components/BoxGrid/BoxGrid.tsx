@@ -1,11 +1,8 @@
 import * as React from "react";
 import { Box, LINE_LENGTH, COLUMN_LENGTH, Tabs } from "../Box/Box";
-import { Html } from "drei";
-import { Header } from "../Header/Header";
-import { HOME_POSITIONS, isLetter } from "../../helpers/letters";
 
 interface BoxGridProps {
-  currentTab: Tabs;
+  currentTab: Tabs | null;
   mouse: React.MutableRefObject<any>;
 }
 

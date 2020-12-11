@@ -21,7 +21,7 @@ interface BoxProps {
   position: { x: number; y: number; z: number };
   speed: number;
   duration: number;
-  currentTab: Tabs;
+  currentTab: Tabs | null;
 }
 
 const BOX_SIZE = GRID_SIZE - BORDER_WIDTH;
@@ -51,7 +51,7 @@ export const Box: React.FunctionComponent<BoxProps> = ({
       if (isHover) {
         mesh.current.position.z = 0;
       } else {
-        mesh.current.position.z = mesh.current.position.z +=
+        mesh.current.position.z +=
           Math.cos(useFrameCount / (10 * duration)) * 0.01 * speed;
         // mesh.current.rotation.x = mesh.current.rotation.y += 0.01;
       }

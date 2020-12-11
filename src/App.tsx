@@ -8,6 +8,7 @@ import { Tabs } from "./components/Box/Box";
 
 function App() {
   const [currentTab, setCurrentTab] = React.useState(Tabs.Home);
+  const [hoverTab, setHoverTab] = React.useState<Tabs | null>(null);
 
   const tabRef = React.useRef<Tabs>(Tabs.Home);
   // const handleCurrentTab = React.useCallback((tab) => {
@@ -17,6 +18,10 @@ function App() {
 
   const handleCurrentTab = (tab: Tabs) => {
     setCurrentTab(tab);
+  };
+
+  const handleHoverTab = (tab: Tabs | null) => {
+    setHoverTab(tab);
   };
 
   return (
@@ -29,8 +34,12 @@ function App() {
       }}
     >
       <ThemeProvider theme={theme}>
-        <Header setCurrentTab={handleCurrentTab} currentTab={currentTab} />
-        <ThreeCanvas currentTab={currentTab} />
+        <Header
+          setCurrentTab={handleCurrentTab}
+          currentTab={currentTab}
+          setHoverTab={handleHoverTab}
+        />
+        <ThreeCanvas currentTab={hoverTab} />
       </ThemeProvider>
     </div>
   );

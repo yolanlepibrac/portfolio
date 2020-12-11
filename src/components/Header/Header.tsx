@@ -18,10 +18,12 @@ import discordIcon from "@iconify/icons-mdi/discord";
 interface HeaderProps {
   setCurrentTab: (tab: Tabs) => void;
   currentTab: Tabs;
+  setHoverTab: (tab: Tabs | null) => void;
 }
 export const Header: React.FunctionComponent<HeaderProps> = ({
   currentTab,
   setCurrentTab,
+  setHoverTab,
 }) => {
   const [contactOpen, setContactOpen] = React.useState(false);
   const toggleContactOpen = () => {
@@ -45,7 +47,8 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
           <Button
             color="primary"
             variant={currentTab === Tabs.Home ? "outlined" : "contained"}
-            onClick={() => setCurrentTab(Tabs.Home)}
+            onMouseEnter={() => setHoverTab(Tabs.Home)}
+            onMouseLeave={() => setHoverTab(null)}
             startIcon={<HomeIcon />}
           >
             Home
@@ -55,7 +58,8 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
           <Button
             color="primary"
             variant={currentTab === Tabs.Projects ? "outlined" : "contained"}
-            onClick={() => setCurrentTab(Tabs.Projects)}
+            onMouseEnter={() => setHoverTab(Tabs.Projects)}
+            onMouseLeave={() => setHoverTab(null)}
             startIcon={<ImportContactsIcon />}
           >
             WORK
@@ -65,7 +69,8 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
           <Button
             color="primary"
             variant={currentTab === Tabs.Dev ? "outlined" : "contained"}
-            onClick={() => setCurrentTab(Tabs.Dev)}
+            onMouseEnter={() => setHoverTab(Tabs.Dev)}
+            onMouseLeave={() => setHoverTab(null)}
             startIcon={<CodeIcon />}
           >
             DEV
@@ -76,6 +81,8 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
             color="primary"
             variant={currentTab === Tabs.Cv ? "outlined" : "contained"}
             onClick={() => setCurrentTab(Tabs.Cv)}
+            onMouseEnter={() => setHoverTab(Tabs.Cv)}
+            onMouseLeave={() => setHoverTab(null)}
             startIcon={<InsertDriveFileIcon />}
           >
             C.V.
