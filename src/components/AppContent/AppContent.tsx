@@ -1,9 +1,8 @@
 import * as React from "react";
+import { PROJECTS } from "../../constantes/projects";
 import { Card } from "../Card/Card";
 
 export const AppContent = () => {
-  const PROJECTS = [1, 2, 3, 4, 5, 6, 7];
-
   return (
     <div
       style={{
