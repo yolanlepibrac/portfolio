@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 export interface Project {
   title: string;
+  subtitle: string;
   description: string;
   homePage?: string;
   detailSource?: string;
@@ -12,11 +13,13 @@ export interface Project {
   type: string;
   logo?: string;
   logoWhite?: string;
+  techno?: string[];
 }
 
 export const PROJECTS = [
   {
     title: "Do you wanna bet",
+    subtitle: "Mobile Application",
     description:
       "Application and website to store the bet you made with friends",
     homeImage: "./assets/images/projets/16_do-you-wanna-bet/home.png",
@@ -30,9 +33,11 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/wanabet-1.jpg",
     logoWhite: "/images/wanabet-1-white.jpg",
+    techno: ["react native", "mongo-db"],
   },
   {
     title: "Images Displayer",
+    subtitle: "Website",
     description: "Engine to search and store your favourites movies",
     homeImage: "./assets/images/projets/17_images-displayer/home.png",
     detailImage: "./assets/images/projets/17_images-displayer/detail.png",
@@ -46,6 +51,7 @@ export const PROJECTS = [
   },
   {
     title: "Movie displayer",
+    subtitle: "Website",
     description:
       "Display of images in a complex grid to store favourites pictures",
     homeImage: "./assets/images/projets/13_movie-displayer/home.png",
@@ -60,6 +66,7 @@ export const PROJECTS = [
   },
   {
     title: "Image processing",
+    subtitle: "Website",
     description:
       "Website where you can apply filters on your pictures, and download it.",
     homeImage: "./assets/images/projets/14_image-processing/home.png",
@@ -74,6 +81,7 @@ export const PROJECTS = [
   },
   {
     title: "What will we eat",
+    subtitle: "Website",
     description:
       "Random generation of places to eat, depending of the current day.",
     homeImage: "./assets/images/projets/15_what-will-we-eat/home.png",
@@ -88,6 +96,7 @@ export const PROJECTS = [
   },
   {
     title: "ICOS Application",
+    subtitle: "Website",
     description:
       "Interface de représentation d'une base de donnée de process BIM et extensions Tekla",
     homeImage: "./assets/images/projets/21_ICOS-applications/home.png",
@@ -99,9 +108,11 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: ["mithril"],
   },
   {
     title: "Find the seal",
+    subtitle: "Mobile Application",
     description: "Video Game for smartphone",
     homeImage: "./assets/images/projets/18_find-the-seal/home.png",
     detailImage: "./assets/images/projets/18_find-the-seal/detail.png",
@@ -117,6 +128,7 @@ export const PROJECTS = [
   },
   {
     title: "Save the bear",
+    subtitle: "Mobile Application",
     description: "Video Game for smartphone",
     homeImage: "./assets/images/projets/19_save-the-bear/home.png",
     detailImage: "./assets/images/projets/19_save-the-bear/detail.png",
@@ -130,7 +142,8 @@ export const PROJECTS = [
     logoWhite: "/images/save-the-bear-white.jpg",
   },
   {
-    title: "Drive the pinguins",
+    title: "Drive the penguins",
+    subtitle: "Mobile Application",
     description: "Video Game for smartphone",
     homeImage: "./assets/images/projets/20_drive-the-pinguins/home.png",
     detailImage: "./assets/images/projets/20_drive-the-pinguins/detail.png",
@@ -145,6 +158,7 @@ export const PROJECTS = [
   },
   {
     title: "Kapla Simulator",
+    subtitle: "Website",
     description: "Simulator de Kapla tri-dimansionnel",
     homeImage: "./assets/images/not-available-yet.png",
     detailImage: "",
@@ -158,6 +172,7 @@ export const PROJECTS = [
   },
   {
     title: "10 puissance 4",
+    subtitle: "Website",
     description:
       "Puissance 4 dans un espace vectoriel de dimension 10 (jeux smartphone)",
     homeImage: "./assets/images/not-available-yet.png",

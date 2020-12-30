@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { grey } from "@material-ui/core/colors";
 
 export const useStyles = makeStyles((theme) => ({
   cardContainer: {
@@ -15,8 +14,8 @@ export const useStyles = makeStyles((theme) => ({
     transition: "all 500ms ease 0s",
     overflow: "hidden",
     "&:hover": {
-      border: "1px solid rgb(56, 132, 255)",
-      color: "rgb(56, 132, 255)",
+      border: `1px solid ${theme.palette.primary.main}`,
+      color: theme.palette.primary.main,
       cursor: "pointer",
       "& $whiteLogo": {
         opacity: 1,
