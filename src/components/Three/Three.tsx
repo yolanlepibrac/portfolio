@@ -18,7 +18,18 @@ const ThreeCanvas: React.FunctionComponent<ThreeCanvasProps> = ({
     []
   );
   return (
-    <div onMouseMove={onMouseMove} style={{ width: "100%", height: "100vh" }}>
+    <div
+      onMouseMove={onMouseMove}
+      style={{
+        width: "100%",
+        height: "100vh",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: 100,
+        marginTop: 56,
+      }}
+    >
       <Canvas
         style={{ width: "100%", height: "100vh" }}
         camera={{ fov: 75, position: [0, 0, -5] }}

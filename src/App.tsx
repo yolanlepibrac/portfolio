@@ -5,6 +5,7 @@ import { theme } from "./lib/theme";
 import ThreeCanvas from "./components/Three/Three";
 import { Header } from "./components/Header/Header";
 import { Tabs } from "./components/Box/Box";
+import { AppContent } from "./components/AppContent/AppContent";
 
 function App() {
   const [currentTab, setCurrentTab] = React.useState(Tabs.Home);
@@ -39,7 +40,8 @@ function App() {
           currentTab={currentTab}
           setHoverTab={handleHoverTab}
         />
-        <ThreeCanvas currentTab={hoverTab} />
+        {/* <ThreeCanvas currentTab={hoverTab} /> */}
+        <AppContent />
       </ThemeProvider>
     </div>
   );
