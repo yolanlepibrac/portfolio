@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import * as React from "react";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MailIcon from "@material-ui/icons/Mail";
@@ -35,24 +36,29 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
   const [itemHover, setItemHover] = React.useState<Item | null>(null);
   const GithubLogo =
     itemHover === Item.Github
-      ? "/images/messenger.png"
-      : "/images/messenger-white.png";
+      ? "/images/github.png"
+      : "/images/github-white.png";
 
-  const MailLogo = itemHover === Item.Mail ? "red" : theme.palette.primary.main;
+  const MailLogo =
+    itemHover === Item.Mail ? "/images/gmail.png" : "/images/gmail-white.png";
 
   const LinkedInLogo =
-    itemHover === Item.LinkedIn ? "black" : theme.palette.primary.main;
+    itemHover === Item.LinkedIn
+      ? "/images/linkedIn.png"
+      : "/images/linkedIn-white.png";
 
   const MessengerLogo =
     itemHover === Item.Messenger
-      ? "linear-gradient(#0088FF, #A033FF, #FF5C87)"
-      : theme.palette.primary.main;
+      ? "/images/messenger.png"
+      : "/images/messenger-white.png";
 
   const SlackLogo =
-    itemHover === Item.Slack ? "red" : theme.palette.primary.main;
+    itemHover === Item.Slack ? "/images/slack.png" : "/images/slack-white.png";
 
   const DiscordLogo =
-    itemHover === Item.Discord ? "blue" : theme.palette.primary.main;
+    itemHover === Item.Discord
+      ? "/images/discord.png"
+      : "/images/discord-white.png";
 
   return (
     <Drawer open={open} onClose={toggleOpen} anchor="right">
@@ -84,7 +90,7 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
           <ContactIcon
             setHover={() => setItemHover(Item.Mail)}
             setLeave={() => setItemHover(null)}
-            imageUrl={DiscordLogo}
+            imageUrl={MailLogo}
           />
           <ContactIcon
             setHover={() => setItemHover(Item.LinkedIn)}

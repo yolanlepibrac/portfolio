@@ -24,7 +24,7 @@ export const ContactIcon: React.FunctionComponent<ContactIconProps> = ({
       onMouseEnter={() => setHover()}
       onMouseLeave={() => setLeave()}
     >
-      <img src={imageUrl} alt="logo" width="30" height="30" />
+      <img src={imageUrl} alt="logo" width="30" />
     </Grid>
   );
 };
