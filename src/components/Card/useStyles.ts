@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
       "rgba(50, 50, 50, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px",
     border: "1px solid white",
     margin: theme.spacing(2),
-    transition: "all 500ms ease 0s",
+    transition: "all 500ms ease 0s;",
     overflow: "hidden",
     "&:hover": {
       border: `1px solid ${theme.palette.primary.main}`,
@@ -19,6 +19,9 @@ export const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
       "& $whiteLogo": {
         opacity: 1,
+      },
+      "& $techno": {
+        color: theme.palette.primary.main,
       },
     },
   },
@@ -34,13 +37,16 @@ export const useStyles = makeStyles((theme) => ({
     margin: "0rem -2rem -1rem",
     position: "relative",
   },
-  title: {},
+  title: {
+    fontSize: 22,
+  },
   subTitle: {
     color: "rgba(120,120,120,1)",
+    fontSize: 16,
   },
   description: {
     fontSize: 14,
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(4),
     color: "black",
     position: "relative",
   },
@@ -66,5 +72,15 @@ export const useStyles = makeStyles((theme) => ({
     opacity: 0,
     zIndex: 2,
     transition: "all 500ms ease 0s",
+  },
+  techno: {
+    position: "absolute",
+    bottom: -theme.spacing(2),
+    left: 0,
+    color: "white",
+    transition: "all 500ms ease 0s;",
+  },
+  subTitleContainer: {
+    position: "relative",
   },
 }));

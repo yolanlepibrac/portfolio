@@ -33,7 +33,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/wanabet-1.jpg",
     logoWhite: "/images/wanabet-1-white.jpg",
-    techno: ["react native", "mongo-db"],
+    techno: ["ReactNative", "Node-Express", "MongoDb"],
   },
   {
     title: "Images Displayer",
@@ -48,6 +48,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: ["Mithril", "Node-Express", "MongoDb"],
   },
   {
     title: "Movie displayer",
@@ -63,6 +64,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: ["ReactJs", "Node-Express", "MongoDb"],
   },
   {
     title: "Image processing",
@@ -78,6 +80,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: ["ReactJs", "Node-Express", "MongoDb"],
   },
   {
     title: "What will we eat",
@@ -93,6 +96,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: ["ReactJs", "Node-Express", "MongoDb"],
   },
   {
     title: "ICOS Application",
@@ -108,7 +112,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
-    techno: ["mithril"],
+    techno: ["Mithril"],
   },
   {
     title: "Find the seal",
@@ -125,6 +129,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/find-the-seal.jpg",
     logoWhite: "/images/find-the-seal-white.jpg",
+    techno: ["ReactNative", "Node-Express", "MongoDb"],
   },
   {
     title: "Save the bear",
@@ -140,6 +145,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/save-the-bear.jpg",
     logoWhite: "/images/save-the-bear-white.jpg",
+    techno: ["ReactNative", "Node-Express", "MongoDb"],
   },
   {
     title: "Drive the penguins",
@@ -155,6 +161,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/drive-the-pinguins.jpg",
     logoWhite: "/images/drive-the-pinguins-white.jpg",
+    techno: ["ReactNative", "Node-Express", "MongoDb"],
   },
   {
     title: "Kapla Simulator",
@@ -169,6 +176,7 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: ["ReactJs", "ThreeJs", "ReactThreeFiber"],
   },
   {
     title: "10 puissance 4",
@@ -184,5 +192,12 @@ export const PROJECTS = [
     type: "web",
     logo: "/images/sejongs-cup.png",
     logoWhite: "/images/sejongs-cup-white.png",
+    techno: [
+      "ReactJs",
+      "ThreeJs",
+      "ReactThreeFiber",
+      "Node-Express",
+      "MongoDb",
+    ],
   },
 ];

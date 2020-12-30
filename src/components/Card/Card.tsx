@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import * as React from "react";
 import { Project } from "../../constants/projects";
 import { useStyles } from "./useStyles";
@@ -14,10 +14,21 @@ export const Card: React.FunctionComponent<CardProps> = ({ project }) => {
       <div className={classes.cardContent}>
         <div className={classes.headContainer}>
           <div className={classes.headContent}>
-            <Typography variant="h6">{project.title}</Typography>
-            <Typography variant="subtitle1" className={classes.subTitle}>
-              {project.date}
-            </Typography>
+            <Grid container justify="space-between" alignItems="center">
+              <Typography variant="h6" className={classes.title}>
+                {project.title}
+              </Typography>
+              <Typography variant="body2">{project.date}</Typography>
+            </Grid>
+            <Grid className={classes.subTitleContainer}>
+              <Typography variant="subtitle1" className={classes.subTitle}>
+                {project.subtitle}
+              </Typography>
+              <Typography variant="caption" className={classes.techno}>
+                {project.techno?.join(" - ")}
+              </Typography>
+            </Grid>
+
             <Typography
               variant="body1"
               align="justify"
