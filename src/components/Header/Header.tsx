@@ -7,13 +7,7 @@ import ImportContactsIcon from "@material-ui/icons/ImportContacts";
 import CodeIcon from "@material-ui/icons/Code";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import PersonIcon from "@material-ui/icons/Person";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import MailIcon from "@material-ui/icons/Mail";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import { Icon, InlineIcon } from "@iconify/react";
-import facebookMessenger from "@iconify/icons-mdi/facebook-messenger";
-import slackIcon from "@iconify/icons-mdi/slack";
-import discordIcon from "@iconify/icons-mdi/discord";
+import { ContactDrawer } from "../ContactDrawer/ContactDrawer";
 
 interface HeaderProps {
   setCurrentTab: (tab: Tabs) => void;
@@ -98,46 +92,7 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
         >
           <PersonIcon />
         </Fab>
-        <Drawer open={contactOpen} onClose={toggleContactOpen} anchor="right">
-          <Grid container style={{ width: 400 }}>
-            Contacts
-            <Grid item container style={{ fontSize: 30 }}>
-              <Grid item xs={2} container justify="center">
-                <GitHubIcon color="primary" fontSize="inherit" />
-              </Grid>
-              <Grid item xs={2} container justify="center">
-                <MailIcon color="primary" fontSize="inherit" />
-              </Grid>
-              <Grid item xs={2} container justify="center">
-                <LinkedInIcon color="primary" fontSize="inherit" />
-              </Grid>
-              <Grid item xs={2} container justify="center">
-                <Icon
-                  icon={facebookMessenger}
-                  color={theme.palette.primary.main}
-                  width="30"
-                  height="30"
-                />
-              </Grid>
-              <Grid item xs={2} container justify="center">
-                <Icon
-                  icon={slackIcon}
-                  color={theme.palette.primary.main}
-                  width="30"
-                  height="30"
-                />
-              </Grid>
-              <Grid item xs={2} container justify="center">
-                <Icon
-                  icon={discordIcon}
-                  color={theme.palette.primary.main}
-                  width="30"
-                  height="30"
-                />
-              </Grid>
-            </Grid>
-          </Grid>
-        </Drawer>
+        <ContactDrawer open={contactOpen} toggleOpen={toggleContactOpen} />
       </Grid>
     </Grid>
   );
