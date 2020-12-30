@@ -11,6 +11,7 @@ export interface Project {
   date: number;
   type: string;
   logo?: string;
+  logoWhite?: string;
 }
 
 export const PROJECTS = [
@@ -28,6 +29,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/wanabet-1.jpg",
+    logoWhite: "/images/wanabet-1-white.jpg",
   },
   {
     title: "Images Displayer",
@@ -40,6 +42,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
   {
     title: "Movie displayer",
@@ -53,6 +56,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
   {
     title: "Image processing",
@@ -66,6 +70,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
   {
     title: "What will we eat",
@@ -79,6 +84,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
   {
     title: "ICOS Application",
@@ -92,6 +98,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
   {
     title: "Find the seal",
@@ -106,6 +113,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/find-the-seal.jpg",
+    logoWhite: "/images/find-the-seal-white.jpg",
   },
   {
     title: "Save the bear",
@@ -119,6 +127,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/save-the-bear.jpg",
+    logoWhite: "/images/save-the-bear-white.jpg",
   },
   {
     title: "Drive the pinguins",
@@ -132,6 +141,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/drive-the-pinguins.jpg",
+    logoWhite: "/images/drive-the-pinguins-white.jpg",
   },
   {
     title: "Kapla Simulator",
@@ -144,6 +154,7 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
   {
     title: "10 puissance 4",
@@ -157,5 +168,6 @@ export const PROJECTS = [
     date: 2019,
     type: "web",
     logo: "/images/sejongs-cup.png",
+    logoWhite: "/images/sejongs-cup-white.png",
   },
 ];

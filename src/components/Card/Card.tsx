@@ -29,7 +29,20 @@ export const Card: React.FunctionComponent<CardProps> = ({ project }) => {
         </div>
         {project.logo && (
           <div className={classes.bottomContainer}>
-            <img style={{ height: "auto", width: "100%" }} src={project.logo} />
+            <div className={classes.coloredLogo}>
+              <img
+                style={{ height: "auto", width: "100%" }}
+                src={project.logo}
+              />
+            </div>
+            {project.logoWhite && (
+              <div className={classes.whiteLogo}>
+                <img
+                  style={{ height: "auto", width: "100%" }}
+                  src={project.logoWhite}
+                />
+              </div>
+            )}
           </div>
         )}
       </div>

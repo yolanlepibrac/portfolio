@@ -50,11 +50,23 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
       ? "/images/discord.png"
       : "/images/discord-white.png";
 
+  const GithubBorder = itemHover === Item.Github ? "black" : "rgba(0,0,0,0.7)";
+  const MailBorder = itemHover === Item.Mail ? "#D54137" : "rgba(0,0,0,0.7)";
+  const LinkedInBorder =
+    itemHover === Item.LinkedIn ? "#2174B3" : "rgba(0,0,0,0.7)";
+  const MessengerBorder =
+    itemHover === Item.Messenger
+      ? "linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%)"
+      : "rgba(0,0,0,0.7)";
+  const SlackBorder = itemHover === Item.Slack ? "blue" : "rgba(0,0,0,0.7)";
+  const DiscordBorder =
+    itemHover === Item.Discord ? "#8A9CFE" : "rgba(0,0,0,0.7)";
+
   return (
     <Drawer open={open} onClose={toggleOpen} anchor="right">
       <Grid
         container
-        style={{ width: 400, height: "100vh", padding: 12 }}
+        style={{ width: 600, height: "100vh", padding: 12 }}
         direction="column"
         justify="space-between"
       >
@@ -71,37 +83,45 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
           <br />
           <br />
         </Grid>
-        <Grid item container style={{ fontSize: 30 }}>
-          <ContactIcon
-            setHover={() => setItemHover(Item.Github)}
-            setLeave={() => setItemHover(null)}
-            imageUrl={GithubLogo}
-          />
-          <ContactIcon
-            setHover={() => setItemHover(Item.Mail)}
-            setLeave={() => setItemHover(null)}
-            imageUrl={MailLogo}
-          />
-          <ContactIcon
-            setHover={() => setItemHover(Item.LinkedIn)}
-            setLeave={() => setItemHover(null)}
-            imageUrl={LinkedInLogo}
-          />
-          <ContactIcon
-            setHover={() => setItemHover(Item.Messenger)}
-            setLeave={() => setItemHover(null)}
-            imageUrl={MessengerLogo}
-          />
-          <ContactIcon
-            setHover={() => setItemHover(Item.Slack)}
-            setLeave={() => setItemHover(null)}
-            imageUrl={SlackLogo}
-          />
-          <ContactIcon
-            setHover={() => setItemHover(Item.Discord)}
-            setLeave={() => setItemHover(null)}
-            imageUrl={DiscordLogo}
-          />
+        <Grid item>
+          <Grid container spacing={2}>
+            <ContactIcon
+              setHover={() => setItemHover(Item.Github)}
+              setLeave={() => setItemHover(null)}
+              imageUrl={GithubLogo}
+              borderColor={GithubBorder}
+            />
+            <ContactIcon
+              setHover={() => setItemHover(Item.Mail)}
+              setLeave={() => setItemHover(null)}
+              imageUrl={MailLogo}
+              borderColor={MailBorder}
+            />
+            <ContactIcon
+              setHover={() => setItemHover(Item.LinkedIn)}
+              setLeave={() => setItemHover(null)}
+              imageUrl={LinkedInLogo}
+              borderColor={LinkedInBorder}
+            />
+            <ContactIcon
+              setHover={() => setItemHover(Item.Messenger)}
+              setLeave={() => setItemHover(null)}
+              imageUrl={MessengerLogo}
+              borderColor={MessengerBorder}
+            />
+            <ContactIcon
+              setHover={() => setItemHover(Item.Slack)}
+              setLeave={() => setItemHover(null)}
+              imageUrl={SlackLogo}
+              borderColor={SlackBorder}
+            />
+            <ContactIcon
+              setHover={() => setItemHover(Item.Discord)}
+              setLeave={() => setItemHover(null)}
+              imageUrl={DiscordLogo}
+              borderColor={DiscordBorder}
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Drawer>
