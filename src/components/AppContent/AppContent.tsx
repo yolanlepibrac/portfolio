@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PROJECTS } from "../../constantes/projects";
+import { PROJECTS } from "../../constants/projects";
 import { Card } from "../Card/Card";
 
 export const AppContent = () => {

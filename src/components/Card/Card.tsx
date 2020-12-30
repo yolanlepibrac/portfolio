@@ -1,7 +1,6 @@
-import classes from "*.module.css";
 import { Typography } from "@material-ui/core";
 import * as React from "react";
-import { Project } from "../../constantes/projects";
+import { Project } from "../../constants/projects";
 import { useStyles } from "./useStyles";
 
 interface CardProps {
@@ -28,12 +27,11 @@ export const Card: React.FunctionComponent<CardProps> = ({ project }) => {
             </Typography>
           </div>
         </div>
-        <div className={classes.bottomContainer}>
-          <img
-            style={{ height: "auto", width: "100%" }}
-            src="/images/sejongs-cup.png"
-          />
-        </div>
+        {project.logo && (
+          <div className={classes.bottomContainer}>
+            <img style={{ height: "auto", width: "100%" }} src={project.logo} />
+          </div>
+        )}
       </div>
     </div>
   );

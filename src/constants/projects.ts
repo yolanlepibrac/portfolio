@@ -10,6 +10,7 @@ export interface Project {
   open: boolean;
   date: number;
   type: string;
+  logo?: string;
 }
 
 export const PROJECTS = [
@@ -26,6 +27,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/wanabet-1.jpg",
   },
   {
     title: "Images Displayer",
@@ -37,6 +39,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
   {
     title: "Movie displayer",
@@ -49,6 +52,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
   {
     title: "Image processing",
@@ -61,6 +65,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
   {
     title: "What will we eat",
@@ -73,6 +78,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
   {
     title: "ICOS Application",
@@ -85,6 +91,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
   {
     title: "Find the seal",
@@ -98,6 +105,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/find-the-seal.jpg",
   },
   {
     title: "Save the bear",
@@ -110,6 +118,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/save-the-bear.jpg",
   },
   {
     title: "Drive the pinguins",
@@ -122,6 +131,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/drive-the-pinguins.jpg",
   },
   {
     title: "Kapla Simulator",
@@ -133,6 +143,7 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
   {
     title: "10 puissance 4",
@@ -145,5 +156,6 @@ export const PROJECTS = [
     open: false,
     date: 2019,
     type: "web",
+    logo: "/images/sejongs-cup.png",
   },
 ];

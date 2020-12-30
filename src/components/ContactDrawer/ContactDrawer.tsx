@@ -1,18 +1,8 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import * as React from "react";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import MailIcon from "@material-ui/icons/Mail";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import { Icon } from "@iconify/react";
-import facebookMessenger from "@iconify/icons-mdi/facebook-messenger";
-import slackIcon from "@iconify/icons-mdi/slack";
-import discordIcon from "@iconify/icons-mdi/discord";
 import { Grid, Drawer } from "@material-ui/core";
 import { useStyles } from "./useStyles";
-import { theme } from "../../lib/theme";
 import { ContactIcon } from "../ContactIcon/ContactIcon";
-import { getJSDocEnumTag } from "typescript";
-import { GifTwoTone } from "@material-ui/icons";
 
 interface ContactDrawerProps {
   open: boolean;
