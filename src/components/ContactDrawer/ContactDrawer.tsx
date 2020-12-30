@@ -56,9 +56,12 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
     itemHover === Item.LinkedIn ? "#2174B3" : "rgba(0,0,0,0.7)";
   const MessengerBorder =
     itemHover === Item.Messenger
-      ? "linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%)"
+      ? "linear-gradient(20deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%)"
       : "rgba(0,0,0,0.7)";
-  const SlackBorder = itemHover === Item.Slack ? "blue" : "rgba(0,0,0,0.7)";
+  const SlackBorder =
+    itemHover === Item.Slack
+      ? "linear-gradient(90deg, #41C5F0 10%, #3FB67D 30%, #ECB22D 60%, #E01E5A 100%)"
+      : "rgba(0,0,0,0.7)";
   const DiscordBorder =
     itemHover === Item.Discord ? "#8A9CFE" : "rgba(0,0,0,0.7)";
 
@@ -66,25 +69,46 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
     <Drawer open={open} onClose={toggleOpen} anchor="right">
       <Grid
         container
-        style={{ width: 600, height: "100vh", padding: 12 }}
+        style={{ width: 500, height: "100vh" }}
         direction="column"
         justify="space-between"
       >
-        <Grid item container className={classes.contact}>
-          Contacts
+        <Grid item className={classes.imageContainer}>
+          <img
+            src="/images/map-france-black.png"
+            alt="map"
+            style={{ width: "100%" }}
+          />
+          <Grid container className={classes.profileContainer} justify="center">
+            <Grid item className={classes.profil}>
+              <img
+                alt="profile"
+                src="/images/profile-picture.jpeg"
+                width="200"
+                style={{
+                  borderRadius: "50%",
+                  border: "4px solid white",
+                  boxShadow: "rgb(0,0,0,0.5) 0px 0px 10px",
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item container className={classes.contact} justify="center">
           <br />
-          email : yolan.pibrac@gmail.com
+          yolan.pibrac@gmail.com
           <br />
           <br />
-          phone : +33 6 14 74 29 26
+          +33 6 14 74 29 26
           <br />
           <br />
-          adress : 11 rue Valadon 75 007 Paris
+          11 rue Valadon 75 007 Paris
           <br />
           <br />
         </Grid>
-        <Grid item>
-          <Grid container spacing={2}>
+        <Grid item className={classes.contactLinksContainer}>
+          <Grid container spacing={1}>
             <ContactIcon
               setHover={() => setItemHover(Item.Github)}
               setLeave={() => setItemHover(null)}

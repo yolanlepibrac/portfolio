@@ -23,12 +23,20 @@ export const ContactIcon: React.FunctionComponent<ContactIconProps> = ({
         justify="center"
         alignContent="center"
         alignItems="center"
-        className={classes.iconButton}
-        onMouseEnter={() => setHover()}
-        onMouseLeave={() => setLeave()}
-        style={{ borderColor: borderColor }}
+        className={classes.iconContainer}
+        style={{ background: borderColor }}
       >
-        <img src={imageUrl} alt="logo" style={{ maxHeight: 26 }} />
+        <Grid
+          container
+          justify="center"
+          alignContent="center"
+          alignItems="center"
+          className={classes.iconButton}
+          onMouseEnter={() => setHover()}
+          onMouseLeave={() => setLeave()}
+        >
+          <img src={imageUrl} alt="logo" style={{ maxHeight: 26 }} />
+        </Grid>
       </Grid>
     </Grid>
   );
