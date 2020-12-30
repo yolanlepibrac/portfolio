@@ -3,6 +3,7 @@ import * as React from "react";
 import { Grid, Drawer } from "@material-ui/core";
 import { useStyles } from "./useStyles";
 import { ContactIcon } from "../ContactIcon/ContactIcon";
+import { theme } from "../../lib/theme";
 
 interface ContactDrawerProps {
   open: boolean;
@@ -27,43 +28,40 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
   const GithubLogo =
     itemHover === Item.Github
       ? "/images/github.png"
-      : "/images/github-white.png";
-
+      : "/images/github-blue.png";
   const MailLogo =
-    itemHover === Item.Mail ? "/images/gmail.png" : "/images/gmail-white.png";
-
+    itemHover === Item.Mail ? "/images/gmail.png" : "/images/gmail-blue.png";
   const LinkedInLogo =
     itemHover === Item.LinkedIn
       ? "/images/linkedIn.png"
-      : "/images/linkedIn-white.png";
-
+      : "/images/linkedIn-blue.png";
   const MessengerLogo =
     itemHover === Item.Messenger
       ? "/images/messenger.png"
-      : "/images/messenger-white.png";
-
+      : "/images/messenger-blue.png";
   const SlackLogo =
-    itemHover === Item.Slack ? "/images/slack.png" : "/images/slack-white.png";
-
+    itemHover === Item.Slack ? "/images/slack.png" : "/images/slack-blue.png";
   const DiscordLogo =
     itemHover === Item.Discord
       ? "/images/discord.png"
-      : "/images/discord-white.png";
+      : "/images/discord-blue.png";
 
-  const GithubBorder = itemHover === Item.Github ? "black" : "rgba(0,0,0,0.7)";
-  const MailBorder = itemHover === Item.Mail ? "#D54137" : "rgba(0,0,0,0.7)";
+  const GithubBorder =
+    itemHover === Item.Github ? "black" : theme.palette.primary.main;
+  const MailBorder =
+    itemHover === Item.Mail ? "#D54137" : theme.palette.primary.main;
   const LinkedInBorder =
-    itemHover === Item.LinkedIn ? "#2174B3" : "rgba(0,0,0,0.7)";
+    itemHover === Item.LinkedIn ? "#2174B3" : theme.palette.primary.main;
   const MessengerBorder =
     itemHover === Item.Messenger
       ? "linear-gradient(20deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%)"
-      : "rgba(0,0,0,0.7)";
+      : theme.palette.primary.main;
   const SlackBorder =
     itemHover === Item.Slack
       ? "linear-gradient(90deg, #41C5F0 10%, #3FB67D 30%, #ECB22D 60%, #E01E5A 100%)"
-      : "rgba(0,0,0,0.7)";
+      : theme.palette.primary.main;
   const DiscordBorder =
-    itemHover === Item.Discord ? "#8A9CFE" : "rgba(0,0,0,0.7)";
+    itemHover === Item.Discord ? "#8A9CFE" : theme.palette.primary.main;
 
   return (
     <Drawer open={open} onClose={toggleOpen} anchor="right">
@@ -95,17 +93,22 @@ export const ContactDrawer: React.FunctionComponent<ContactDrawerProps> = ({
           </Grid>
         </Grid>
 
-        <Grid item container className={classes.contact} justify="center">
-          <br />
-          yolan.pibrac@gmail.com
-          <br />
-          <br />
-          +33 6 14 74 29 26
-          <br />
-          <br />
-          11 rue Valadon 75 007 Paris
-          <br />
-          <br />
+        <Grid item className={classes.contact}>
+          <Grid container className={classes.titleContainer}>
+            <div className={classes.title}>Fullstack </div>
+            <div className={classes.title}> Web </div>
+            <div className={classes.title}> Developer</div>
+          </Grid>
+          <Grid
+            container
+            justify="space-between"
+            direction="column"
+            className={classes.infoContainer}
+          >
+            <div className={classes.info}>yolan.pibrac@gmail.com</div>
+            <div className={classes.info}>+33 6 14 74 29 26</div>
+            <div className={classes.info}>11 rue Valadon 75 007 Paris</div>
+          </Grid>
         </Grid>
         <Grid item className={classes.contactLinksContainer}>
           <Grid container spacing={1}>

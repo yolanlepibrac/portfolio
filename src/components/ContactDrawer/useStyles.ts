@@ -5,16 +5,13 @@ export const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   contact: {
-    background:
-      "linear-gradient(81.84deg, #0099ff -9.4%, #a033ff 51.57%, #ff5280 84.07%, #ff7061 90.59%)",
+    background: `linear-gradient(81.84deg, ${theme.palette.primary.main} 0%, #008DFF 50%, ${theme.palette.primary.main} 100%)`,
     "-webkit-background-clip": "text",
     color: "transparent",
     padding: theme.spacing(1),
-    textAlign: "center",
     width: "100%",
-    fontSize: 28,
-    fontFamily: "Calibre",
-    textTransform: "uppercase",
+    fontSize: 30,
+    fontFamily: "Secular One",
   },
   contactLinksContainer: {
     padding: theme.spacing(1),
@@ -31,5 +28,22 @@ export const useStyles = makeStyles((theme) => ({
   profil: {
     height: 200,
     width: 200,
+  },
+  titleContainer: {
+    marginTop: 80,
+  },
+  title: {
+    fontSize: 80,
+    textAlign: "left",
+    width: "100%",
+    lineHeight: "70px",
+    textTransform: "uppercase",
+  },
+  infoContainer: {
+    marginTop: 30,
+  },
+  info: {
+    fontSize: 30,
+    textAlign: "center",
   },
 }));
