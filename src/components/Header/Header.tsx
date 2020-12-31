@@ -83,7 +83,7 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
           </Button>
         </Grid>
       </Grid>
-      <Grid item container xs justify="flex-end">
+      <Grid item container xs={1} justify="flex-end">
         <Fab
           color="primary"
           aria-label="add"

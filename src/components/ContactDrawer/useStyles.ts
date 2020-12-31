@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
   iconButton: {
     cursor: "pointer",
   },
-  contact: {
+  contactInfos: {
     background: `linear-gradient(81.84deg, ${theme.palette.primary.main} 0%, #008DFF 50%, ${theme.palette.primary.main} 100%)`,
     "-webkit-background-clip": "text",
     color: "transparent",
@@ -12,9 +12,16 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     fontSize: 30,
     fontFamily: "Secular One",
+    marginTop: 40,
   },
-  contactLinksContainer: {
+  content: {
+    height: "calc(100vh - 56px)",
+    overflowY: "auto",
+  },
+  bottom: {
     padding: theme.spacing(1),
+    position: "absolute",
+    bottom: 0,
   },
   imageContainer: {
     position: "relative",
@@ -45,5 +52,11 @@ export const useStyles = makeStyles((theme) => ({
   info: {
     fontSize: 30,
     textAlign: "center",
+  },
+  quit: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 11,
   },
 }));

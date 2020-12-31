@@ -30,6 +30,7 @@ export const useStyles = makeStyles((theme) => ({
       "rgba(50, 50, 50, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px",
     border: "1px solid white",
     margin: theme.spacing(2),
+    overflow: "hidden",
     "&:hover": {
       border: `1px solid ${theme.palette.primary.main}`,
       color: theme.palette.primary.main,
