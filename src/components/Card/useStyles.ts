@@ -1,18 +1,35 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
-  cardContainer: {
+  zoomContainer: {
     display: "inline-block",
-    width: 320,
-    height: 500,
+    position: "relative",
+  },
+  zoomContainerAnimate: {
+    display: "inline-block",
+    position: "relative",
+    zIndex: 10,
+    animation: "zoom 1000ms ease-in 300ms forwards",
+  },
+  opacityContainer: {},
+  opacityContainerAnimate: {
+    animation: "opacity 300ms ease-in 1000ms forwards",
+  },
+  spinContainer: {
+    transform: "rotate(90deg)",
+    animation: "unSpin 300ms linear forwards",
+  },
+  spinContainerAnimate: {
+    animation: "spin 300ms linear forwards",
+  },
+  container: {
     borderRadius: "1em",
     backgroundColor: "white",
     boxShadow:
       "rgba(50, 50, 50, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px",
     border: "1px solid white",
     margin: theme.spacing(2),
-    transition: "all 500ms ease 0s;",
-    overflow: "hidden",
     "&:hover": {
       border: `1px solid ${theme.palette.primary.main}`,
       color: theme.palette.primary.main,
@@ -25,17 +42,37 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  cardContainer: {
+    width: 320,
+    height: 500,
+    transition: "all 500ms ease 0s;",
+    overflow: "hidden",
+  },
+
   cardContent: {
     display: "flex",
     flexDirection: "column",
   },
   headContainer: {
+    transition: "all 500ms ease 0s",
     height: 250,
+  },
+  headContainerRotate: {
+    transition: "all 500ms ease 0s",
+    height: 250,
+    opacity: 0,
   },
   headContent: { margin: theme.spacing(5), textAlign: "left" },
   bottomContainer: {
     margin: "0rem -2rem -1rem",
     position: "relative",
+    transform: "rotate(-90deg)",
+    animation: "unSpin 300ms linear forwards",
+  },
+  bottomContainerRotate: {
+    margin: "0rem -2rem -1rem",
+    position: "relative",
+    animation: "spinInverse 300ms linear forwards",
   },
   title: {
     fontSize: 22,

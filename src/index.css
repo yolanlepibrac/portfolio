@@ -12,4 +12,32 @@ code {
     monospace;
 }
 
+@keyframes spin { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); } }
+@keyframes spinInverse { 100% { -webkit-transform: rotate(-90deg); transform:rotate(-90deg); } }
+@keyframes unSpin { 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } }
+
+@keyframes zoom { 100% { -webkit-transform: scale(10); transform:scale(10); } }
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} 
+
+
+/* @keyframes zoom {
+  0% {
+    width: 320px;
+    height: 500px;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+  }
+}*/
+
+
 
