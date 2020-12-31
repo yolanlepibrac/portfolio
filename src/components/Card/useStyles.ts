@@ -31,6 +31,7 @@ export const useStyles = makeStyles((theme) => ({
     border: "1px solid white",
     margin: theme.spacing(2),
     overflow: "hidden",
+    transition: "border 500ms ease 0s",
     "&:hover": {
       border: `1px solid ${theme.palette.primary.main}`,
       color: theme.palette.primary.main,
@@ -46,7 +47,6 @@ export const useStyles = makeStyles((theme) => ({
   cardContainer: {
     width: 320,
     height: 500,
-    transition: "all 500ms ease 0s;",
     overflow: "hidden",
   },
 
