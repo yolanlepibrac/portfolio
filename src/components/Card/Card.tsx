@@ -3,6 +3,7 @@ import * as React from "react";
 import { Project } from "../../constants/projects";
 import { useStyles } from "./useStyles";
 import classnames from "classnames";
+import { Popup } from "../Popup/Popup";
 
 interface CardProps {
   project: Project;
@@ -22,7 +23,7 @@ export const Card: React.FunctionComponent<CardProps> = ({ project }) => {
       if (animationRunning) {
         setPopupOpen(true);
       }
-    }, 100);
+    }, 1000);
   }, [animationRunning]);
 
   const handleOpenCardAnimation = () => {
@@ -33,6 +34,7 @@ export const Card: React.FunctionComponent<CardProps> = ({ project }) => {
 
   return (
     <>
+      {popupOpen && <Popup close={() => setPopupOpen(false)} />}
       <div
         className={
           animationRunning
